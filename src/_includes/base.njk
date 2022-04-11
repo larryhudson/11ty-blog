@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <meta property="og:site_name" content="Larry Hudson"/>
+    <meta property="og:title" content="Larry Hudson"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.benmyers.dev/"/>
+    <meta name="author" content="Larry Hudson">
+    <meta name="description" content="Web developer and programmer from Melbourne, Australia"/>
+    <meta name="twitter:description" content="Web developer and programmer from Melbourne, Australia"/>
+    <meta property="og:description" content="Web developer and programmer from Melbourne, Australia"/>
+    <meta name="twitter:site" content="@larryhudsondev"/>
+    <meta name="twitter:creator" content="@larryhudsondev"/>
+  </head>
+  <body>
+    <header>
+      {% block header %}
+        <h1>Larry Hudson</h1>
+      {% endblock %}
+    </header>
+    {% block body %}
+      {{ content | safe }}
+    {% endblock %}
+  </body>
+</html>

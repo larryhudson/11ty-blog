@@ -1,0 +1,18 @@
+{% extends 'base.njk' %}
+{% block header %}
+    <h1>{{ title }}</h1>
+    <p>{{ page.date }}</p>
+    <p>By
+        <a href="/">Larry Hudson</a>
+    </p>
+{% endblock %}
+{% block body %}
+    {% if mp3Url %}
+        <audio controls>
+            <source src="{{ mp3Url }}" type="audio/mpeg"/> Your browser does not support the audio element.
+        </audio>
+    {% endif %}
+    <main>
+        {{ content|safe }}
+    </main>
+{% endblock %}
