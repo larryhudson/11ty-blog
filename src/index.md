@@ -16,7 +16,7 @@ You can find me on [Twitter](https://www.twitter.com/larryhudsondev), hang out w
 
 I enjoy testing out ideas by creating small demos and experiments. You can see some recent experiments below.
 
-You can [find more on my GitHub profile](github.com/larryhudson/).
+You can [find more on my GitHub profile](https://github.com/larryhudson/).
 
 <div class="project">
 
