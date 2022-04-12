@@ -72,3 +72,11 @@ li {
 .photo img {
   border-radius: 1rem;
 }
+
+.pull-up {
+  margin-top: -0.5rem;
+}
+
+.smaller {
+  font-size: smaller;
+}
