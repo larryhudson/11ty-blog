@@ -29,9 +29,11 @@ module.exports = function (eleventyConfig) {
       "December",
     ];
 
-    date.get;
-
     return `${months[date.getMonth()]} ${date.getFullYear()}`;
+  });
+
+  eleventyConfig.addFilter("timeValue", function (date) {
+    return date.toLocaleString().replaceAll(",", "");
   });
 
   return {

@@ -1,9 +1,11 @@
 {% extends 'base.njk' %}
 {% block header %}
-    <h1>{{ title }}</h1>
-    <p>{{ page.date }}</p>
+    <h1 class="p-name">{{ title }}</h1>
+    <p>
+        <time datetime="{{ page.date | timeValue }}">{{ page.date | monthYear }}</time>
+    </p>
     <p>By
-        <a href="/">Larry Hudson</a>
+        <a href="/" rel="author" class="p-author">Larry Hudson</a>
     </p>
 {% endblock %}
 {% block body %}
@@ -12,7 +14,11 @@
             <source src="{{ mp3Url }}" type="audio/mpeg"/> Your browser does not support the audio element.
         </audio>
     {% endif %}
-    <main>
+    <main class="e-content">
         {{ content|safe }}
     </main>
-{% endblock %}
+    <footer style="font-size: smaller">
+        <p>Page URL:
+            <a href="{{ page.url }}" class="u-url">{{ page.url }}</a>
+        </footer>
+    {% endblock %}

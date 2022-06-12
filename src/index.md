@@ -23,9 +23,11 @@ You can <a href="https://github.com/larryhudson/" class="u-url" rel="me">find mo
 {% for project in collections.projects | reverse %}
 
 <div class="project h-entry">
-<h3>{{project.data.title}}</h3>
-<p class="pull-up smaller">{{project.data.date | monthYear}}</p>
+<h3><a href="{{project.url}}" class="u-url u-uid">{{project.data.title}}</a></h3>
+<p class="pull-up smaller"><time class="dt-published" datetime="{{project.data.date | timeValue}}">{{project.data.date | monthYear}}</time></p>
+<div class="e-content">
 {{project.templateContent|safe}}
+</div>
 </div>
 {% endfor %}
 
