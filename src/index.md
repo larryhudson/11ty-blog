@@ -1,6 +1,12 @@
 <div class="h-card">
 
-<div class="photo"><a href="https://larryhudson.io" class="u-url image-link"><img class="u-photo" src="/images/Larry_2020.jpg" alt=""></a></div>
+<div class="photo">
+<picture class="u-photo">
+    <source srcset="/images/Larry_2020.webp" type="image/webp">
+    <source srcset="/images/Larry_2020.jpg" type="image/jpeg">
+    <img src="/images/Larry_2020.jpg" height="230" width="183" alt="Profile picture of Larry smiling with blurry trees behind">
+</picture>
+</div>
 
 Hi there! My name is <span class="p-name">Larry Hudson</span> and this is my personal site.
 
