@@ -2,9 +2,9 @@
 
 <div class="photo">
 <picture class="u-photo">
-    <source srcset="/images/Larry_2020.webp" type="image/webp">
-    <source srcset="/images/Larry_2020.jpg" type="image/jpeg">
-    <img src="/images/Larry_2020.jpg" height="230" width="183" alt="Profile picture of Larry smiling with blurry trees behind">
+    <source srcset="/images/Larry_366.webp" type="image/webp">
+    <source srcset="/images/Larry_366.jpg" type="image/jpeg">
+    <img src="/images/Larry_366.jpg" height="195" width="183" alt="Profile picture of Larry smiling with blurry trees behind">
 </picture>
 </div>
 
