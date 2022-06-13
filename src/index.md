@@ -20,6 +20,8 @@ I enjoy testing out ideas by creating small demos and experiments. You can see s
 
 You can <a href="https://github.com/larryhudson/" class="u-url" rel="me">find more on my GitHub profile</a>.
 
+You can also subscribe to the <a href="/feed.xml" rel="alternate" type="application/rss+xml">RSS feed of updates</a>.
+
 {% for project in collections.projects | reverse %}
 
 <div class="project h-entry">
