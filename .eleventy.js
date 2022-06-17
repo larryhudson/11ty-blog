@@ -1,6 +1,9 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { EleventyEdgePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyEdgePlugin);
+
   eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addTemplateFormats("css");
