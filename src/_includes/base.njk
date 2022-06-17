@@ -36,6 +36,13 @@
       {% block header %}
         <h1>Larry Hudson</h1>
       {% endblock %}
+      {% block searchform %}
+        <form method="get" action="/search/">
+          <label for="search">Search</label>
+          <input type="search" name="search" id="search">
+          <button>Search</button>
+        </form>
+      {% endblock %}
     </header>
     {% block body %}
       {{ content | safe }}
