@@ -4,6 +4,11 @@ const { EleventyEdgePlugin } = require("@11ty/eleventy");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyEdgePlugin);
 
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@11ty/is-land/is-land.js": "is-land.js",
+    "node_modules/alpinejs/dist/cdn.min.js": "alpine.js",
+  });
+
   eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addTemplateFormats("css");

@@ -30,6 +30,7 @@
     <link rel="webmention" href="https://webmention.io/larryhudson.io/webmention"/>
     <link rel="pingback" href="https://webmention.io/larryhudson.io/xmlrpc"/>
     <link rel="alternate" type="application/rss+xml" title="Projects RSS feed" href="/feed.xml"/>
+    <script type="module" src="/is-land.js"></script>
   </head>
   <body class="{% block bodyclass %}{% endblock %}">
     <header>
@@ -37,11 +38,48 @@
         <h1>Larry Hudson</h1>
       {% endblock %}
       {% block searchform %}
-        <form method="get" action="/search/">
-          <label for="search">Search</label>
-          <input type="search" name="search" id="search">
-          <button>Search</button>
-        </form>
+        <is-land on:interaction import="/alpine.js">
+          <form method="get" action="/search/">
+            <label for="search">Search</label>
+            <input type="search" name="search" id="search">
+            <button>Search</button>
+          </form>
+          <template data-island="replace">
+            <script>
+              document.addEventListener('alpine:init', () => {
+                Alpine.data('alpineSearchData', () => ({
+                  searchQuery: '',
+                  searchResults: [],
+                  async fetchResults(searchQuery) {
+                    console.log(searchQuery)
+                    if (searchQuery === "" || typeof searchQuery === 'undefined') 
+                      this.searchResults = []
+                    
+                    const searchParams = new URLSearchParams({query: searchQuery}).toString()
+                    const searchUrl = '/search-data.json?' + searchParams;
+                    this.searchResults = await fetch(searchUrl).then(r => r.json())
+                  },
+                  init() {
+                    document.getElementById("search").focus();
+                    this.$watch('searchQuery', (searchQuery) => this.fetchResults(searchQuery))
+                  }
+                }))
+              })
+            </script>
+            <form x-data="alpineSearchData" x-init="" method="get" action="/search/">
+              <label for="search">Search</label>
+              <input type="search" x-model.debounce="searchQuery" name="search" id="search">
+              <button>Search</button>
+              <ul x-if="searchResults">
+                <template x-for="result in searchResults">
+                  <li>
+                    <a :href="result.url" x-text="result.title"></a>
+                  </li>
+                </template>
+              </ul>
+            </form>
+          </template>
+        </is-land>
       {% endblock %}
     </header>
     {% block body %}
