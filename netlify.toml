@@ -23,3 +23,7 @@
 [[edge_functions]]
 function = "eleventy-edge"
 path = "/search/"
+
+[[edge_functions]]
+function = "filter-search-data"
+path = "/search-data.json"

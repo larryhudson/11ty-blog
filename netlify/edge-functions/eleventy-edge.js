@@ -20,13 +20,13 @@ export default async (request, context) => {
         if (!searchQuery) return [];
 
         const requestOrigin = new URL(request.url).origin;
-        const searchJsonUrl = requestOrigin + "/search-data.json";
-        const allProjects = await fetch(searchJsonUrl).then((r) => r.json());
-
-        const searchResults = filterProjectsByQuery({
-          projects: allProjects,
+        const searchParams = new URLSearchParams({
           query: searchQuery,
         });
+        const searchUrl =
+          requestOrigin + "/search-data.json?" + searchParams.toString();
+
+        const searchResults = await fetch(searchUrl).then((r) => r.json());
 
         return searchResults;
       });
