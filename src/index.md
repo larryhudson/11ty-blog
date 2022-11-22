@@ -18,7 +18,7 @@ I'm passionate about:
 - creating tools to automate repetitive tasks, so creative people can focus on being creative
 - sharing knowledge and encouraging a positive team culture.
 
-You can find me on <a href="https://www.twitter.com/larryhudsondev" class="u-url" rel="me">Twitter</a>, hang out with me in the [lunch.dev Discord](https://events.lunch.dev/) and [Eleventy Discord](https://www.11ty.dev/blog/discord), or email me at <a href="mailto:larryhudson@hey.com" class="u-email" rel="me">larryhudson@hey.com</a>.
+You can find me on <a rel="me" href="https://indieweb.social/@larryhudson">Mastodon</a>, hang out with me in the [lunch.dev Discord](https://events.lunch.dev/) and [Eleventy Discord](https://www.11ty.dev/blog/discord), or email me at <a href="mailto:larryhudson@hey.com" class="u-email" rel="me">larryhudson@hey.com</a>.
 
 ## Recent experiments
 
