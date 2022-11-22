@@ -12,9 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.0-canary.11",
-    "@11ty/is-land": "^1.0.0",
-    "alpinejs": "^3.10.2"
+    "@11ty/eleventy": "^2.0.0-canary.18"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-rss": "^1.1.2"
