@@ -43,7 +43,7 @@ You can also subscribe to the <a href="/feed.xml" rel="alternate" type="applicat
 
 You can find me on:
 
-- <a href="https://www.twitter.com/larryhudsondev" class="u-url" rel="me">Twitter</a>
+- <a rel="me" href="https://indieweb.social/@larryhudson">Mastodon</a>
 - [the lunch.dev Discord](https://events.lunch.dev/)
 - [the Eleventy Discord](https://www.11ty.dev/blog/discord/).
 
