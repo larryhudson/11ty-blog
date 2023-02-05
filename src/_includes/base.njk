@@ -7,13 +7,13 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/css/style.css"/>
     <meta property="og:site_name" content="Larry Hudson"/>
-    <meta property="og:title" content="Larry Hudson"/>
+    <meta property="og:title" content="{% if title %}{{ title }}{% else %}Larry Hudson{% endif %}"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://larryhudson.io/"/>
     <meta name="author" content="Larry Hudson">
-    <meta name="description" content="Web developer and programmer based in Torquay, Australia"/>
-    <meta name="twitter:description" content="Web developer and programmer based in Torquay, Australia"/>
-    <meta property="og:description" content="Web developer and programmer based in Torquay, Australia"/>
+    <meta name="description" content="{% if excerpt %}{{ excerpt }}{% else %}Web developer and programmer based in Torquay, Australia{% endif %}"/>
+    <meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% else %}Web developer and programmer based in Torquay, Australia{% endif %}"/>
+    <meta property="og:description" content="{% if excerpt %}{{ excerpt }}{% else %}Web developer and programmer based in Torquay, Australia{% endif %}"/>
     <meta name="twitter:site" content="@larryhudsondev"/>
     <meta name="twitter:creator" content="@larryhudsondev"/>
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png"/>
@@ -42,4 +42,4 @@
       {{ content | safe }}
     {% endblock %}
   </body>
-</html>
+</html></head></html>
