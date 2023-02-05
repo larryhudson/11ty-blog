@@ -10,7 +10,7 @@
 
 Hi there! My name is <span class="p-name">Larry Hudson</span> and this is my personal site.
 
-<p class="p-note">I'm a web developer and programmer based in <span class="p-locality">Melbourne</span>, <span class="p-country-name">Australia</span>. I'm the <span class="p-job-title">Team Leader of Innovation, Tech and Web</span> at the <a href="https://www.informationaccessgroup.com/" class="p-org">Information Access Group</a>.</p>
+<p class="p-note">I'm a web developer and programmer based in surfy <span class="p-locality">Torquay</span>, <span class="p-country-name">Australia</span>. I'm the <span class="p-job-title">Team Leader of Innovation, Tech and Web</span> at the <a href="https://www.informationaccessgroup.com/" class="p-org">Information Access Group</a>.</p>
 
 I'm passionate about:
 
