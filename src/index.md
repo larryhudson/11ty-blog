@@ -34,7 +34,11 @@ You can also subscribe to the <a href="/feed.xml" rel="alternate" type="applicat
 <h3><a href="{{project.url}}" class="u-url u-uid">{{project.data.title}}</a></h3>
 <p class="pull-up smaller"><time class="dt-published" datetime="{{project.data.date | timeValue}}">{{project.data.date | monthYear}}</time></p>
 <div class="e-content">
+{% if project.data.excerpt %}
+<p>{{project.data.excerpt}}</p>
+{% else %}
 {{project.templateContent|safe}}
+{% endif %}
 </div>
 </div>
 {% endfor %}
