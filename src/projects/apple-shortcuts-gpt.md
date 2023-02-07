@@ -54,3 +54,15 @@ excerpt: I made a shortcut to have a back and forth conversation with GPT-3 usin
   - If you set up a web app with endpoint URLs for sending queries, you could use an Apple Shortcut to interact with the web app quite easily
 
 Thanks for reading, I hope this is an interesting example of how you can play around with GPT-3 and what you can do with Apple Shortcuts. Feel free to reach out if you have any ideas or feedback.
+
+## Update: extra 'Ask GPT about this' shortcut
+
+Following on from the ideas I shared above, I created another 'Ask GPT about this' shortcut. It's a really simple shortcut &ndash; all it does is:
+
+- use the 'get text from input' shortcut to turn the shared content into text
+- ask the user for a question
+- combine the text and the question into a prompt
+- send the API request to OpenAI
+- show the result.
+
+[I shared a video demonstrating what it can do on Mastodon](https://indieweb.social/@larryhudson/109820216818549786). You can install the shortcut yourself here: [Add 'Ask GPT about this' shortcut to Shortcuts](https://www.icloud.com/shortcuts/bb6c28f1d101491688df993a236091c4).
