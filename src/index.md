@@ -28,7 +28,7 @@ You can <a href="https://github.com/larryhudson/" class="u-url" rel="me">find mo
 
 You can also subscribe to the <a href="/feed.xml" rel="alternate" type="application/rss+xml">RSS feed of updates</a>.
 
-{% for project in collections.projects | reverse %}
+{% for project in collections.publishedProjects | reverse %}
 
 <div class="project h-entry">
 <h3><a href="{{project.url}}" class="u-url u-uid">{{project.data.title}}</a></h3>

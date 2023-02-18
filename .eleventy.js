@@ -40,6 +40,20 @@ module.exports = function (eleventyConfig) {
     return date.toLocaleString().replaceAll(",", "");
   });
 
+  eleventyConfig.addFilter("niceDate", function (date) {
+    const test = new Date().toLocaleDateString("en-AU", { dateStyle: "long" });
+    return date.toLocaleDateString("en-AU", { dateStyle: "long" });
+  });
+
+  eleventyConfig.addCollection("publishedProjects", function (collectionApi) {
+    return collectionApi.getFilteredByTag("projects").filter((post) => {
+      if (post.data.isDraft) {
+        return false;
+      }
+      return true;
+    });
+  });
+
   return {
     dir: {
       input: "src",

@@ -1,7 +1,7 @@
 {% extends 'base.njk' %}
 {% block bodyclass %}h-entry{% endblock %}
 {% block searchform %}{% endblock %}
-{% block header %}
+{# {% block header %}
     <h1 class="p-name">{{ title }}</h1>
     <p>
         <time class="dt-published" datetime="{{ page.date | timeValue }}">{{ page.date | monthYear }}</time>
@@ -9,8 +9,12 @@
     <p>By
         <a href="/" rel="author" class="p-author h-card">Larry Hudson</a>
     </p>
-{% endblock %}
+{% endblock %} #}
 {% block body %}
+    <h1 class="p-name">{{ title }}</h1>
+    <p>
+        <time class="dt-published" datetime="{{ page.date | timeValue }}">{{ page.date | niceDate }}</time>
+    </p>
     {% if mp3Url %}
         <audio controls>
             <source src="{{ mp3Url }}" type="audio/mpeg"/> Your browser does not support the audio element.

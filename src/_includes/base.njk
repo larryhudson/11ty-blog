@@ -35,7 +35,7 @@
   <body class="{% block bodyclass %}{% endblock %}">
     <header>
       {% block header %}
-        <h1>Larry Hudson</h1>
+        {% include 'partials/header.njk' %}
       {% endblock %}
     </header>
     {% block body %}
