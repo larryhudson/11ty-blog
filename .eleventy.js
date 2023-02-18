@@ -45,6 +45,14 @@ module.exports = function (eleventyConfig) {
     return date.toLocaleDateString("en-AU", { dateStyle: "long" });
   });
 
+  eleventyConfig.addFilter("absoluteLink", function (value) {
+    if (value.startsWith("/")) {
+      return `https://larryhudson.io${value}`;
+    } else {
+      return value;
+    }
+  });
+
   eleventyConfig.addCollection("publishedProjects", function (collectionApi) {
     return collectionApi.getFilteredByTag("projects").filter((post) => {
       if (post.data.isDraft) {

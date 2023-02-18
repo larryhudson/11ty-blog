@@ -12,7 +12,7 @@
 {% endblock %} #}
 {% block body %}
     <h1 class="p-name">{{ title }}</h1>
-    <p>
+    <p class="pull-up">
         <time class="dt-published" datetime="{{ page.date | timeValue }}">{{ page.date | niceDate }}</time>
     </p>
     {% if mp3Url %}
@@ -25,6 +25,6 @@
     </main>
     <footer style="font-size: smaller">
         <p>Page URL:
-            <a href="{{ page.url }}" class="u-url">{{ page.url }}</a>
+            <a href="{{ page.url | absoluteLink }}" class="u-url">{{ page.url | absoluteLink }}</a>
         </footer>
     {% endblock %}

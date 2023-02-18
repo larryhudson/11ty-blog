@@ -25,6 +25,11 @@ body {
   font-size: 1.25rem;
 }
 
+p,
+li {
+  max-width: 48ch;
+}
+
 a {
   color: var(--color-text, #dbdbdb);
 }
@@ -84,7 +89,7 @@ li {
 }
 
 .pull-up {
-  margin-top: -0.5rem;
+  margin-top: -1.5rem;
 }
 
 .smaller {
@@ -100,6 +105,7 @@ header {
 
 header nav {
   display: flex;
+  flex-wrap: wrap;
 }
 
 header nav .name {
@@ -114,6 +120,8 @@ header nav a {
 header nav ul {
   list-style: none;
   padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 header nav li {
