@@ -1,9 +1,38 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
+const PuppeteerAfterPlugin = require("./plugins/puppeteer-after");
+const generateOgImages = require("./utils/generate-og-images");
+
+const fs = require("node:fs");
+const path = require("node:path");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(syntaxHighlight);
 
-  eleventyConfig.addTemplateFormats("css");
+  eleventyConfig.addPlugin(PuppeteerAfterPlugin, {
+    func: async ({ baseUrl, browserPage }) => {
+      const outputDir = eleventyConfig.dir.output;
+
+      const imagesToGenerate = await fs.promises
+        .readFile(path.join(outputDir, "/tmp/og-image-data.json"))
+        .then(JSON.parse);
+
+      await generateOgImages({
+        imagesToGenerate,
+        baseUrl,
+        outputDir,
+        browserPage,
+      });
+
+      await fs.promises.rm(path.join(outputDir, "tmp"), { recursive: true });
+
+      // delete the tmp folder
+    },
+  });
+
+  eleventyConfig.addPassthroughCopy("src/css");
 
   eleventyConfig.addPassthroughCopy("src/images");
 
@@ -41,7 +70,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("niceDate", function (date) {
-    const test = new Date().toLocaleDateString("en-AU", { dateStyle: "long" });
+    if (typeof date === "undefined") return "";
     return date.toLocaleDateString("en-AU", { dateStyle: "long" });
   });
 

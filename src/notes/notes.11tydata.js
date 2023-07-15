@@ -1,4 +1,4 @@
 module.exports = {
-  tags: ["notes"],
+  tags: ["notes", "rss", "generateOgImage"],
   layout: "post.njk",
 };

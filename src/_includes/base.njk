@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/font.css"/>
     <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/night-owl-syntax-highlight.css"/>
     <meta property="og:site_name" content="Larry Hudson"/>
     <meta property="og:title" content="{% if title %}{{ title }}{% else %}Larry Hudson{% endif %}"/>
+    <meta property="og:image" content="https://larryhudson.io{{ page.url }}og-image.jpg"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://larryhudson.io/"/>
+    <meta name="twitter:image" content="https://larryhudson.io{{ page.url }}og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="author" content="Larry Hudson">
     <meta name="description" content="{% if excerpt %}{{ excerpt }}{% else %}Web developer and programmer based in Torquay, Australia{% endif %}"/>
     <meta name="twitter:description" content="{% if excerpt %}{{ excerpt }}{% else %}Web developer and programmer based in Torquay, Australia{% endif %}"/>
@@ -42,4 +47,4 @@
       {{ content | safe }}
     {% endblock %}
   </body>
-</html></head></html>
+</html></html>
