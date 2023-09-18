@@ -33,7 +33,7 @@ module.exports = function (eleventyConfig, suppliedOptions) {
 
     const baseUrl = `http://localhost:${serverPort}`;
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ headless: "new" });
     const browserPage = await browser.newPage();
 
     await func({
